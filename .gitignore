@@ -36,6 +36,7 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+*.unitypackage.meta
 
 # Unity3D generated file on crash reports
 sysinfo.txt
@@ -50,3 +51,6 @@ UserSettings/Layouts/default-2021.dwlt
 UserSettings/Layouts/default-2021.dwlt
 UserSettings/Layouts/default-2021.dwlt
 UserSettings/Layouts/default-2021.dwlt
+
+# ArcGIS SDK
+/Trail Project/Packages/com.esri.arcgis-maps-sdk
