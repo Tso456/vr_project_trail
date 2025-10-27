@@ -318,6 +318,7 @@ GameObject:
   - component: {fileID: 720751435}
   - component: {fileID: 720751434}
   - component: {fileID: 720751433}
+  - component: {fileID: 720751436}
   m_Layer: 0
   m_Name: ArcGISMap
   m_TagString: Untagged
@@ -337,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c703502c1493f5b4eb3e95b2efe0271e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ArcGISMapsSDK::Esri.ArcGISMapsSDK.Components.ArcGISMapComponent
-  apiKey: 
+  apiKey: 'AAPTxy8BH1VEsoebNVZXo8HurGzu0xBPk0oAUtGynrvoGFF48WuSAith4Lynus_ZOeXVTwT1wUV8W0kozZH92cuoK2qAu6BGOvTCDlwUA9myd3koFSuBdrK9eV7mzrxcFp7y6c87zcdmO--DuQ9nO3ktOaYAk5I0W0EVqXIHlhGkbCdbJa7dJWYqvEjbl2OvxzXokaInEJLDYyARr1NSzOcpffkXrpnEg8mp5-pPxzIRcogYsI0RrK7Ee7Y6Lvx3zl6aAT1_XUbapXs2 '
   basemap: https://basemapstyles-api.arcgis.com/arcgis/rest/services/styles/v2/webmaps/arcgis/imagery/standard
   basemapType: 0
   basemapAuthentication:
@@ -369,13 +370,35 @@ MonoBehaviour:
       version: 1
     ExtentShape: 2
     ShapeDimensions:
-      x: 5000
+      x: 1000
       y: 0
     UseOriginAsCenter: 1
-  layers: []
+  layers:
+  - Name: PendletonSquare
+    Type: 2
+    Source: https://tiles.arcgis.com/tiles/x5wCko8UnSi4h0CB/arcgis/rest/services/PendletonSquare_3DMesh_20250313/SceneServer
+    Opacity: 1
+    IsVisible: 1
+    Authentication:
+      ConfigurationIndex: 0
+    AuthenticationType: 1
+    BuildingSceneLayerFilter:
+      ActiveBuildingAttributeFilterIndex: 0
+      BuildingAttributeFilters: []
+      IsBuildingAttributeFilterEnabled: 0
+      IsBuildingDisciplinesCategoriesFilterEnabled: 0
+      EnabledCategories: 
+      EnabledDisciplines: 
+    MeshModifications:
+      IsEnabled: 0
+      MeshModifications: []
+    SpatialFeatureFilter:
+      IsEnabled: 0
+      Polygons: []
+      Type: 0
   originPosition:
-    X: -74
-    Y: 41
+    X: -82.78383
+    Y: 34.6515551
     Z: 0
     SRWkid: 4326
     SpatialReference:
@@ -411,9 +434,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Esri.HPFramework::Esri.HPFramework.HPRoot
   m_LocalPosition:
-    x: -8237642.318702245
+    x: -9215453.801516924
     y: 0
-    z: 5012341.663847515
+    z: 4116629.1188881416
   m_LocalRotation:
     value:
       x: 0
@@ -429,12 +452,34 @@ Transform:
   m_GameObject: {fileID: 720751432}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -249, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &720751436
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720751432}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &756192406
 GameObject:
   m_ObjectHideFlags: 0
