@@ -54,3 +54,6 @@ UserSettings/Layouts/default-2021.dwlt
 
 # ArcGIS SDK
 /Trail Project/Packages/com.esri.arcgis-maps-sdk
+
+# UserSettings
+/Trail Project/UserSettings/
