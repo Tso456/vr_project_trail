@@ -46,12 +46,21 @@ public class SplineFollower : MonoBehaviour
 
     private void Start()
     {
-        //// Optional, uncomment this or apply it another way so that time is used to determine the speed we need to travel at.
-        //if (timeToReachEnd > 0)
-        //{
-        //    speed = Spline.GetLength() / timeToReachEnd;
-        //}
-    }
+        //Option 1: If you want a random start position every time:
+        progress = Random.value;
+
+        //Option 2: If you want to use the inspector value, comment out line above.
+
+        float easedProgress = easeInAndOut ? Smoothstep(progress) : progress;
+
+        //Set starting position
+        transform.position = SplineContainer.EvaluatePosition(easedProgress);
+
+        //Set starting rotation
+        Vector3 tangent = SplineContainer.EvaluateTangent(easedProgress);
+        if (tangent != Vector3.zero)
+            transform.rotation = Quaternion.LookRotation(tangent, Vector3.up);
+        }
 
     void Update()
     {
@@ -99,14 +108,18 @@ public class SplineFollower : MonoBehaviour
             Vector3 estimationPosition = this.SplineContainer.EvaluatePosition(easedProgress);
 
             // Apply position
-            transform.position = Vector3.Lerp(transform.position, estimationPosition, Time.deltaTime * speed);
+            //transform.position = Vector3.Lerp(transform.position, estimationPosition, Time.deltaTime * speed);
+            transform.position = estimationPosition;
 
-            //Vector3 Dir = new Vector3(velocity.x, velocity.y, velocity.z).normalized;
-            Vector3 RightDir = Vector3.up;//new Vector3().Cross(Vector3.up, velocity);
-                
-            float dist = velocity * Time.deltaTime;
-            float alpha = (dist * 180.0f) / (Mathf.PI * 0.37f);
-            transform.Rotate(RightDir, alpha, Space.World);
+            // Get spline tangent (direction)
+            Vector3 tangent = SplineContainer.EvaluateTangent(easedProgress);
+
+            // Apply rotation
+            if (tangent != Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(tangent, Vector3.up);
+            }
+
         }
     }
 
