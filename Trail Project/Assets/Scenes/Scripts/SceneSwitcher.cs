@@ -5,7 +5,6 @@ using System.Collections;
 public class SceneSwitcher : MonoBehaviour
 {
     string[] scenes = { "POI_1_Alex", "POI_2_Heath", "POI_3_Ray" };
-    string mainScene = "mainTrailScene";
 
     ///<summary>
     /// Switches to the scene based on the provided index.
