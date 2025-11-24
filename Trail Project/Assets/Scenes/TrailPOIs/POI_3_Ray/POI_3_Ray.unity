@@ -131,6 +131,10 @@ GameObject:
   - component: {fileID: 86077439}
   - component: {fileID: 86077438}
   - component: {fileID: 86077437}
+  - component: {fileID: 86077444}
+  - component: {fileID: 86077443}
+  - component: {fileID: 86077442}
+  - component: {fileID: 86077441}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -225,12 +229,96 @@ Transform:
   m_GameObject: {fileID: 86077436}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.6264, y: 9.5, z: 8.5528}
-  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_LocalPosition: {x: 36.22, y: 10.37, z: -20.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &86077441
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86077436}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5615978, y: 4.979191, z: 10.028355}
+  m_Center: {x: -4.719201, y: 2.4756527, z: -0.014177322}
+--- !u!65 &86077442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86077436}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.42837143, y: 4.979191, z: 10.001562}
+  m_Center: {x: 4.7858143, y: 2.4756527, z: -0.00078105927}
+--- !u!65 &86077443
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86077436}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 4.979191, z: 0.4566288}
+  m_Center: {x: 0, y: 2.4756527, z: -4.7972975}
+--- !u!65 &86077444
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86077436}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 4.979191, z: 0.44247627}
+  m_Center: {x: 0, y: 2.4756527, z: 4.778762}
 --- !u!4 &231328423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1717954561962503726, guid: d53cf112dfed7eb46af52fe1bc5ab0ff, type: 3}
@@ -699,6 +787,7 @@ GameObject:
   - component: {fileID: 720751435}
   - component: {fileID: 720751434}
   - component: {fileID: 720751433}
+  - component: {fileID: 720751436}
   m_Layer: 0
   m_Name: ArcGISMap
   m_TagString: Untagged
@@ -839,6 +928,28 @@ Transform:
   - {fileID: 231328423}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &720751436
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720751432}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &756192406
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,7 +1013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bbba49acb848c0448694828560b07fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ArcGISMapsSDK::Esri.ArcGISMapsSDK.Components.ArcGISCameraComponent
-  UpdateClippingPlanes: 0
+  UpdateClippingPlanes: 1
   UseCameraViewportProperties: 1
   verticalFov: 0
   horizontalFov: 0
