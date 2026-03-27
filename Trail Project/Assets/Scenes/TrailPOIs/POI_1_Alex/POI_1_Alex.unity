@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c703502c1493f5b4eb3e95b2efe0271e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ArcGISMapsSDK::Esri.ArcGISMapsSDK.Components.ArcGISMapComponent
-  apiKey: 'AAPTxy8BH1VEsoebNVZXo8HurGzu0xBPk0oAUtGynrvoGFF48WuSAith4Lynus_ZOeXVTwT1wUV8W0kozZH92cuoK2qAu6BGOvTCDlwUA9myd3koFSuBdrK9eV7mzrxcFp7y6c87zcdmO--DuQ9nO3ktOaYAk5I0W0EVqXIHlhGkbCdbJa7dJWYqvEjbl2OvxzXokaInEJLDYyARr1NSzOcpffkXrpnEg8mp5-pPxzIRcogYsI0RrK7Ee7Y6Lvx3zl6aAT1_XUbapXs2 '
+  apiKey: 
   basemap: https://basemapstyles-api.arcgis.com/arcgis/rest/services/styles/v2/webmaps/arcgis/imagery/standard
   basemapType: 0
   basemapAuthentication:
