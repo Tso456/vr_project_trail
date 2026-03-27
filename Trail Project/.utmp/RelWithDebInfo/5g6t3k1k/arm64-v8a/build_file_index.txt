@@ -1,0 +1,2 @@
+C:\Users\Heath\Workspace\Projects\VR Project\vr_project_trail\Trail Project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\Heath\Workspace\Projects\VR Project\vr_project_trail\Trail Project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
