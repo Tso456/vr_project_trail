@@ -8147,6 +8147,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5270034214534258288, guid: f9fe85a99c408ef498aab6bc36e6adfa, type: 3}
   m_PrefabInstance: {fileID: 1769288362}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1778929123
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3095991426614648656, guid: 3502e1ba07c3cd845a91f671872d2594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095991426614648656, guid: 3502e1ba07c3cd845a91f671872d2594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095991426614648656, guid: 3502e1ba07c3cd845a91f671872d2594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -130.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095991426614648656, guid: 3502e1ba07c3cd845a91f671872d2594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095991426614648656, guid: 3502e1ba07c3cd845a91f671872d2594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.2682473
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095991426614648656, guid: 3502e1ba07c3cd845a91f671872d2594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095991426614648656, guid: 3502e1ba07c3cd845a91f671872d2594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.9633502
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095991426614648656, guid: 3502e1ba07c3cd845a91f671872d2594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095991426614648656, guid: 3502e1ba07c3cd845a91f671872d2594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -148.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095991426614648656, guid: 3502e1ba07c3cd845a91f671872d2594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953436537315403386, guid: 3502e1ba07c3cd845a91f671872d2594, type: 3}
+      propertyPath: m_Name
+      value: PitDroidSplat
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3502e1ba07c3cd845a91f671872d2594, type: 3}
 --- !u!1 &1785969838
 GameObject:
   m_ObjectHideFlags: 0
@@ -9850,3 +9907,4 @@ SceneRoots:
   - {fileID: 975399307}
   - {fileID: 1825071242}
   - {fileID: 312469221}
+  - {fileID: 1778929123}
