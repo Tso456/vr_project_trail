@@ -371,7 +371,7 @@
       "url": "https://packages.unity.com"
     },
     "org.nesnausk.gaussian-splatting": {
-      "version": "file:D:/UnityProjects/AppliedXR/vr_project_trail/package",
+      "version": "file:D:/Unity Projects/AppliedXR/vr_project_trail/package",
       "depth": 0,
       "source": "local",
       "dependencies": {
