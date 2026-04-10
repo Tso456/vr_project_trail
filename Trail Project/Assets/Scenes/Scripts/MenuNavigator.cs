@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class MenuNavigator : MonoBehaviour
 {
@@ -44,23 +45,39 @@ public class MenuNavigator : MonoBehaviour
     public void ShowMenu(int menuIndex)
     {
         if (!IsValidIndex(menuIndex)) return;
+
+        GameObject targetMenu = menuPanels[menuIndex];
+
+        // Ignore duplicate request to avoid unnecessary state churn.
+        if (currentActiveMenu == targetMenu)
+        {
+            return;
+        }
         
         // Save current menu to history (if navigating to a different menu)
-        if (currentMenuIndex != -1 && currentMenuIndex != menuIndex)
+        if (currentMenuIndex != -1)
         {
             menuHistory.Push(currentMenuIndex);
         }
         
-        // Hide current menu
-        if (currentActiveMenu != null)
+        // Hide current menu unless it is a parent of the menu we are about to show.
+        if (currentActiveMenu != null && !targetMenu.transform.IsChildOf(currentActiveMenu.transform))
         {
             currentActiveMenu.SetActive(false);
         }
+
+        // Ensure the target and its parent chain are active so nested menus can become visible.
+        ActivateHierarchy(targetMenu.transform);
         
         // Show new menu
         currentMenuIndex = menuIndex;
-        currentActiveMenu = menuPanels[menuIndex];
+        currentActiveMenu = targetMenu;
         currentActiveMenu.SetActive(true);
+
+        // Keep newly shown menu on top of sibling menus when using a shared canvas hierarchy.
+        currentActiveMenu.transform.SetAsLastSibling();
+
+        LogVisibilityState(currentActiveMenu);
         
         Debug.Log($"Navigated to menu: {currentActiveMenu.name}");
     }
@@ -90,17 +107,28 @@ public class MenuNavigator : MonoBehaviour
         if (menuHistory.Count > 0)
         {
             int previousMenuIndex = menuHistory.Pop();
+            if (!IsValidIndex(previousMenuIndex))
+            {
+                return;
+            }
+
+            GameObject previousMenu = menuPanels[previousMenuIndex];
             
             // Hide current menu
-            if (currentActiveMenu != null)
+            if (currentActiveMenu != null && !previousMenu.transform.IsChildOf(currentActiveMenu.transform))
             {
                 currentActiveMenu.SetActive(false);
             }
+
+            ActivateHierarchy(previousMenu.transform);
             
             // Show previous menu (without adding to history)
             currentMenuIndex = previousMenuIndex;
-            currentActiveMenu = menuPanels[previousMenuIndex];
+            currentActiveMenu = previousMenu;
             currentActiveMenu.SetActive(true);
+            currentActiveMenu.transform.SetAsLastSibling();
+
+            LogVisibilityState(currentActiveMenu);
             
             Debug.Log($"Went back to menu: {currentActiveMenu.name}");
         }
@@ -169,6 +197,45 @@ public class MenuNavigator : MonoBehaviour
     #endregion
     
     #region Helper Methods
+
+    private void ActivateHierarchy(Transform target)
+    {
+        Transform cursor = target;
+        while (cursor != null)
+        {
+            if (!cursor.gameObject.activeSelf)
+            {
+                cursor.gameObject.SetActive(true);
+            }
+
+            if (cursor == transform)
+            {
+                break;
+            }
+
+            cursor = cursor.parent;
+        }
+    }
+
+    private void LogVisibilityState(GameObject menu)
+    {
+        if (menu == null)
+        {
+            return;
+        }
+
+        if (!menu.activeInHierarchy)
+        {
+            Debug.LogWarning($"Menu '{menu.name}' is activeSelf but not activeInHierarchy. A parent object is disabled.");
+            return;
+        }
+
+        CanvasGroup canvasGroup = menu.GetComponent<CanvasGroup>();
+        if (canvasGroup != null && (canvasGroup.alpha <= 0f || !canvasGroup.interactable || !canvasGroup.blocksRaycasts))
+        {
+            Debug.LogWarning($"Menu '{menu.name}' has CanvasGroup settings that may hide or block interaction. alpha={canvasGroup.alpha}, interactable={canvasGroup.interactable}, blocksRaycasts={canvasGroup.blocksRaycasts}");
+        }
+    }
     
     private bool IsValidIndex(int index)
     {

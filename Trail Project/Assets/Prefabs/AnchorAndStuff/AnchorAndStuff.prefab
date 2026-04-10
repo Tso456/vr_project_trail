@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 379451099759280806, guid: ce89fb22af89c804388b2cc8d73fe7a4, type: 3}
+      propertyPath: menuNav
+      value: 
+      objectReference: {fileID: 7115599424286401390}
     - target: {fileID: 2627183343880252980, guid: ce89fb22af89c804388b2cc8d73fe7a4, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
@@ -146,6 +150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: POI Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 7935088051221783455, guid: ce89fb22af89c804388b2cc8d73fe7a4, type: 3}
+      propertyPath: 'POI.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3734274199930442100}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -156,6 +164,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 120499733219553033, guid: ce89fb22af89c804388b2cc8d73fe7a4, type: 3}
   m_PrefabInstance: {fileID: 6049372776089451488}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7115599424286401390 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3552248861511276686, guid: ce89fb22af89c804388b2cc8d73fe7a4, type: 3}
+  m_PrefabInstance: {fileID: 6049372776089451488}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9411ad16f3b8f4c86b73403459c3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuNavigator
 --- !u!1001 &8858618587887865604
 PrefabInstance:
   m_ObjectHideFlags: 0
